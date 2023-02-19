@@ -17,7 +17,7 @@ export const WelcomeButtons = styled.div`
 
 export const WelcomeButton = styled(Link)`
   padding: 10px 20px;
-  background-color: #3498db;
+  background-color: ${({ theme }) => theme.colors.accent};
   color: white;
   border-radius: 5px;
   text-decoration: none;

@@ -28,9 +28,9 @@ const Login: FC = () => {
             })
 
             if (response.ok) {
-              const data = await response.json()
-              console.log(data)
-              setToken(data.token)
+              const token = await response.json()
+              console.log(token)
+              setToken(token)
               navigate('/home')
             } else {
               const errorData = await response.json()

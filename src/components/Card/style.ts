@@ -56,7 +56,7 @@ export const BackButton = styled.button`
   margin: 10px 10px;
 
   &:hover {
-    background-color: #344fe9;
+    background-color: ${({ theme }) => theme.colors.accent};
     color: #ffffff;
     box-shadow: 0px 5px #de1212;
     transform: translate(0, -5px);

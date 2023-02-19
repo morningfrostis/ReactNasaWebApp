@@ -8,6 +8,7 @@ export const Form = styled(DefaultForm)`
   flex-direction: column;
   align-items: center;
   padding: 30px;
+  margin-top: 40px;
 `
 
 export const InputContainer = styled.div`

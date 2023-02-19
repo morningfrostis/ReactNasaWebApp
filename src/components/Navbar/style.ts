@@ -6,7 +6,7 @@ export const Container = styled.div`
 `
 
 export const Nav = styled.nav`
-  background-color: #0b3d91;
+  background-color: ${({ theme }) => theme.colors.accent};
   height: 50px;
   display: flex;
   align-items: center;

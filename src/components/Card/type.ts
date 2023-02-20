@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 
 export type Props = {
+  id: string
   idNasa: string
   cameraName: string
   cameraId?: string

@@ -7,6 +7,9 @@ export const WelcomeContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
+  @media (max-width: 768px) {
+    width: 100%; /* Ancho completo del contenedor */
+  }
 `
 
 export const WelcomeButtons = styled.div`
@@ -24,4 +27,9 @@ export const WelcomeButton = styled(Link)`
   margin: 0 10px;
   border: none;
   cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 0 0 10px;
+  }
 `

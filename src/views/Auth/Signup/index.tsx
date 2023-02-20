@@ -69,6 +69,11 @@ const Signup: FC = () => {
             )}
           </Field>
           <Button type="submit">SignUp</Button>
+          <div style={{ marginTop: '10px' }}>
+            <p>
+              Already have an account? <a href="/login">Go to login 👈 </a>
+            </p>
+          </div>
         </Form>
       </Formik>
     </Container>

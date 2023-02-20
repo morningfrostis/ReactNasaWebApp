@@ -18,9 +18,7 @@ export const getRovers = async () => {
         Authorization: `Bearer ${token}`,
       },
     })
-    console.log({ response })
     const data: Rovers[] = await response.json()
-    console.log(data)
     return data
   } catch (error) {
     console.log(error)
@@ -77,4 +75,20 @@ export const updateRovers = async (id: number, data: Partial<Rovers>) => {
   } catch (error) {
     console.log((error as Error).message)
   }
+}
+
+export const getRoversById = async (id: string) => {
+  try {
+    const token = getToken()
+    const response = await fetch(`${BASE_API_URL}/${id}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    const data: Rovers = await response.json()
+    return data
+  } catch (error) {
+    console.log(error)
+  }
+  return null
 }

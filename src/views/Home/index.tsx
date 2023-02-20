@@ -1,6 +1,7 @@
 import { FC, useCallback, useEffect, useState } from 'react'
 import { getRovers, Rovers } from '../../services/Api/rovers'
 import Card from '../../components/Card'
+
 const Home: FC = () => {
   const [roversList, setRoversList] = useState<Rovers[]>([])
 
@@ -18,6 +19,7 @@ const Home: FC = () => {
       {roversList.map((rover, index) => (
         <Card
           key={index}
+          id={rover.id}
           earthDate={rover.earth_date}
           idNasa={rover.idNasa}
           cameraName={rover.camera}

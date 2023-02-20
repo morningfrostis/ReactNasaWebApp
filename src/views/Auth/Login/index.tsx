@@ -5,7 +5,7 @@ import Button from '../../../components/Button'
 import { setToken } from '../../../services/Storage/storage'
 import { validationSchema, initialValues } from './constants'
 import { Container, Error, Form, Input, InputContainer, Label } from './style'
-
+import { Link } from 'react-router-dom'
 const Login: FC = () => {
   const navigate = useNavigate()
   const [error, setError] = useState<string | null>(null)
@@ -69,6 +69,11 @@ const Login: FC = () => {
             )}
           </Field>
           <Button type="submit">Login</Button>
+          <div style={{ marginTop: '10px' }}>
+            <p>
+              New here? <a href="/signup">Go to register 👈 </a>
+            </p>
+          </div>
         </Form>
       </Formik>
     </Container>

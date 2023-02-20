@@ -1,7 +1,15 @@
 import { FC, memo } from 'react'
 import type { Props } from './type'
-import Button from '../Button'
-import { CardUnit, Title, Description, Divider, CoverImage } from './style'
+import {
+  CardUnit,
+  Title,
+  Description,
+  Divider,
+  CoverImage,
+  ButtonLink,
+} from './style'
+// import { Link } from 'react-router-dom'
+// import Button from '../Button'
 
 const Card: FC<Props> = ({
   type = 'list',
@@ -9,14 +17,15 @@ const Card: FC<Props> = ({
   cameraId,
   earthDate,
   urlImage,
-  listName,
-  onClick,
+  id,
 }) => {
-  const handleClick = () => {
-    if (onClick && listName) {
-      onClick(listName)
-    }
-  }
+  // listName,
+  // onClick,
+  // const handleClick = () => {
+  //   if (onClick && listName) {
+  //     onClick(listName)
+  //   }
+  // }
   return (
     <CardUnit>
       {type === 'list' && <Title $type={type}>Earth Date: {earthDate}</Title>}
@@ -26,9 +35,10 @@ const Card: FC<Props> = ({
       {urlImage && <CoverImage src={urlImage} />}
       <Divider />
       {type === 'rovers' && <Description>Camera Id:: {cameraId}</Description>}
-      {type === 'rovers' && <Description>Earth Date: {earthDate}</Description>}
+      {/* {type === 'rovers' && <Description>Earth Date: {earthDate}</Description>} */}
       {type === 'list' && (
-        <Button onClick={handleClick}>See photo & data Rover: </Button>
+        // <Link to={`/details/${id}`}>See photo & data Rover: </Link>
+        <ButtonLink to={`/details/${id}`}>See photo & data Rover</ButtonLink>
       )}
     </CardUnit>
   )

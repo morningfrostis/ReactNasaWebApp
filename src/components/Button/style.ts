@@ -12,6 +12,7 @@ export const ButtonClass = styled.button<{ $isDisabled?: boolean }>`
   font-weight: bold;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
+  margin-left: 35px;
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.red100};

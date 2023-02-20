@@ -1,6 +1,6 @@
 import { FC, memo } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-// import Details from '../../views/Details'
+import Details from '../../views/Details'
 import Home from '../../views/Home'
 import Login from '../../views/Auth/Login'
 import Signup from '../../views/Auth/Signup'
@@ -16,7 +16,7 @@ const Router: FC = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/home" element={<Home />} />
-        {/* <Route path="/details/:listName" element={<Details />} /> */}
+        <Route path="/details/:id" element={<Details id={''} />} />
       </Routes>
     </BrowserRouter>
   )
